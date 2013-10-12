@@ -1,0 +1,30 @@
+<form method="post" action="{% url 'add' %}">
+  {% csrf_token %}
+  <div>
+    <label>
+      Full name
+    </label>
+    <input type="text" name="full_name"/>
+  </div>
+  <div>
+    <label>
+      Email address
+    </label>
+    <input type="text" name="email"/>
+  </div>
+  <div>
+      <label>
+	Create a password
+      </label>
+      <input type="password" name="password"/>
+  </div>
+  <div>
+      <label>
+	Choose your username
+      </label>
+      <input type="text" name="nick_name"/>
+  </div>
+  <div>
+    <input type="submit" value="Create my account"/>
+  </div>
+</form>
