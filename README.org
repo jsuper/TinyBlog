@@ -1,2 +1,2 @@
 * TinyBlog
-This is an python django application which used to study django frame work
+This is a python django application which used to study django frame work
