@@ -1,0 +1,22 @@
+{% extends "base_site.html" %}
+
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/tiny-blog.css' %}" />
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+  <div class="left">
+    Weclome to tiny blog
+  </div>
+  <div class="right">
+    <div class="top">
+      sign in
+    </div>
+    <div class="bottom">
+      Sign up
+    </div>
+  </div>
+</div>
+{% endblock %}

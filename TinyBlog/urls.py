@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-
+from django.views.generic import TemplateView
 from django.contrib import admin
 admin.autodiscover()
 
@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'TinyBlog.views.home', name='home'),
+    url(r'^$', TemplateView.as_view(template_name='home.html')),
     # url(r'^TinyBlog/', include('TinyBlog.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
