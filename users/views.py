@@ -5,11 +5,13 @@ from django.shortcuts import render
 from users.models import UserForm
 
 def signup(request):
-    return render(request,'users/signup.html')
+    form = UserForm()
+    return render(request,'users/new-signup.html', {'form':form})
 
-def add(request):
+def create(request):
     user = UserForm(request.POST)
     if user.is_valid():
-        return HttpResponse("Your nick name is %s" % user.cleaned_data['nick_name'])
+        user.save()
+        return HttpResponse("Successfully create new account")
     else:
-        return HttpResponse("There is valid data in form")
+        return HttpResponse("Your input data is not valid </br>" + str(user._errors))
