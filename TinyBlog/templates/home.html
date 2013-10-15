@@ -1,21 +1,45 @@
 {% extends "base_site.html" %}
-
-{% block css %}
-{% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/tiny-blog.css' %}" />
-{% endblock  %}
-
 {% block content %}
-<div class="container">
-  <div class="left">
-    Weclome to tiny blog
-  </div>
-  <div class="right">
-    <div class="top">
-      sign in
+<div class="welcome fluid">
+  <div class="row">
+    <div class="left">
+      Welcome
     </div>
-    <div class="bottom">
-      Sign up
+    <div class="right">
+      <div class="row">
+        <form>
+	  <div class="col-lg-10">
+            <input class="form-control" type="text" placeholder="Your email address"/>
+          </div>
+          <div class="col-lg-10">
+            <input class="form-control" type="password" id="signin-password" placeholder="Password" id="password"/>
+            <button class="btn btn-primary submit" type="submit">
+	      Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="row form-signup">
+        <form class="form-horizontal" role="form">
+           <h2>
+              <strong>New to TinyBlog?</strong>Sign Up
+	   </h2>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="full-name" placeholder="Full name"/>
+          </div>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="email" placeholder="Email address"/>
+          </div>
+          <div class="col-lg-10">
+            <input type="password" id="signup-password" class="form-control" name="password" placeholder="Password"/>
+          </div>
+          <div class="col-lg-10">
+            <button class="btn btn-primary btn-signup" class="form-control" type="submit">
+	      Sign up TinyBlog
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

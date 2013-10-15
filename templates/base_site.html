@@ -1,53 +1,37 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>{% block title %}TinyBlog{% endblock %}</title>
-  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-  <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
-  {% block css %}{% endblock %}
-  <script src="{% static 'js/vendor/custom.modernizr.js' %}"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Tiny Blog{% endblock %}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bs/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/app.css' %}" rel="stylesheet">
+    {% block css %}{% endblock %}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'bs/js/html5shiv.js' %}"></script>
+      <script src="{% static 'bs/js/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
 
-</head>
-<body>
-  <!-- body content here -->
-  <nav class="top-bar">
-      <ul class="title-area">
-        <li class="name">
-	  <h1><a href="#">TinyBlog</a></h1>
-	</li>
-      </ul>
-  </nav>
-  <!-- start page content -->
-  {% block content %}<h1>Page content</h1>{% endblock %}
-  <!-- end page content -->
+  <body>
 
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? '{% static "js/vendor/zepto" %}' : '{% static "js/vendor/jquery" %}') +
-  '.js><\/script>')
-  </script>
-  <script src="{% static 'js/foundation/foundation.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.alerts.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.clearing.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.cookie.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.dropdown.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.forms.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.joyride.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.magellan.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.orbit.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.placeholder.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.reveal.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.section.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.tooltips.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.topbar.js' %}"></script>
-  <script src="{% static 'js/foundation/foundation.interchange.js' %}"></script>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Tiny Blog</a>
+        </div>      
+      </div>
+    </div>
+    <div class="container body">
+      {% block content %}{% endblock %}
+    </div>
+    <script src="{% static 'jquery/jquery.js' %}"></script>
+    <script src="{% static 'bs/js/bootstrap.min.js'%}"></script>
+    {% block js %}{% endblock %}
+  </body>
 </html>

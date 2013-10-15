@@ -1,0 +1,75 @@
+.navbar-header {
+    padding-left: 10%;
+}
+
+.body {
+    margin:0 auto;
+    margin-top:100px;
+    margin-left: 15%;
+    margin-right: 13%;
+}
+
+div {
+    display: block;
+}
+
+.welcome {
+    height: 400px ;
+}
+
+.right .left {
+    height: 380px;
+}
+
+.left {
+    width: 70%;
+    background-color: #bbd8e9;
+    float:left;
+}
+
+.right {
+    float: right;
+    width: 27.5%;
+    margin-left: 2.5%;
+}
+
+#signin-password {
+    width: 70%;
+    float: left;
+}
+
+.submit{
+    margin-left: 1.5%;
+    width: 28.5%;
+}
+
+.col-lg-10 {
+    margin:5px auto;
+    padding:0;
+    width: 100%;
+}
+
+.right > .row {
+    border:1px solid #eee;
+    padding:5px 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.form-signup h2{
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 1px solid #e2e2e2;
+  margin-left: 0;
+  mrigin-right: 0;
+  margin-bottom: 12px;
+  padding:5px 12px;
+  padding-top:0 ;
+}
+
+.col-lg-10 .btn-signup {
+  float: right;
+}
