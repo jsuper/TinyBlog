@@ -1,6 +1,9 @@
 .navbar-header {
     padding-left: 10%;
 }
+.navbar {
+    height:30px;
+}
 
 .body {
     margin:0 auto;
@@ -64,7 +67,7 @@ div {
   font-weight: 300;
   border-bottom: 1px solid #e2e2e2;
   margin-left: 0;
-  mrigin-right: 0;
+  margin-right: 0;
   margin-bottom: 12px;
   padding:5px 12px;
   padding-top:0 ;
@@ -72,4 +75,43 @@ div {
 
 .col-lg-10 .btn-signup {
   float: right;
+}
+
+.user-info {
+    padding-right: 20%;
+}
+
+.form-container {
+    margin:0 10%;
+    margin-top: 20px;
+    width: auto;
+    max-width: 835px;
+    height: 300px;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color:#fff;
+    -webkit-box-shadow: 0 0 225px rgba(255,255,255,.55);
+    box-shadow: 0 0 225px rgba(255,255,255,.55);
+    border-radius: 6px;
+}
+.signin-pan {
+    width:auto;
+    max-width: 538px;
+    padding: 0 10px;
+    margin: 0 auto 10px;
+}
+
+.signin-pan h1 {
+    padding: 20px 0 20px 0;
+    clear: both;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+}
+.forgot-pass {
+    float: right;
+    display: inline-block;
+    position: relative;
+    left:0;
+    top: 0;
 }

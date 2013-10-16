@@ -9,14 +9,17 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', TemplateView.as_view(template_name='home.html')),
+    url(r'^$', TemplateView.as_view(template_name='login.html')),
     # url(r'^TinyBlog/', include('TinyBlog.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^users/',include('users.urls')),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^users/',include('users.urls', namespace='users')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
 )
+
+
+
+

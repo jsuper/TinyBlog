@@ -7,7 +7,7 @@
     </div>
     <div class="right">
       <div class="row">
-        <form>
+        <form action="{% url 'user:login' %}" method="POST">
 	  <div class="col-lg-10">
             <input class="form-control" type="text" placeholder="Your email address"/>
           </div>

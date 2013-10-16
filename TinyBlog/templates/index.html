@@ -1,0 +1,10 @@
+{% extends "base_site.html" %}
+{% block extra %}
+<div class="navbar-right navbar-header user-info">
+  <span class="user-image icon-bar"></span>
+  <a class="navbar-brand" href="#">{{ request.session.full_name }}</a>
+</div>
+{% endblock %}
+{% block content %}
+
+{% endblock %}

@@ -17,4 +17,5 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^create/$', views.create, name = 'create'),
+    url(r'^login/$', views.login, name = 'login'),
 )
