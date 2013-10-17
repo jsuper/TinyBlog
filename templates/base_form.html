@@ -1,0 +1,17 @@
+{% extends 'base_site.html' %}
+{% block content %}
+{% block error_block %}
+<div class="alert alert-danger alter-dismissable error-info" style="margin:0 10%;{% if error %}display:block;{% else %}display:none;{% endif %}">
+   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+   {% block error_msg %}{% endblock %}
+</div>
+{% endblock %}
+<div class="form-container">
+   <div class="signin-pan">
+     {% block center_form %}
+     {% endblock %}
+  </div>
+  {% block extra_info %}
+  {% endblock %}
+</div>
+{% endblock %}

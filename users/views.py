@@ -1,6 +1,6 @@
 # Create your views here.
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils import simplejson as sjson
 
 from users.models import UserForm
@@ -19,7 +19,7 @@ def login(request):
             request.session['nick_name'] = login_user.nick_name
             request.session['email'] = login_user.email 
             request.session['user_id'] = login_user.id
-            return render(request,'index.html')
+            return redirect('/')
         else:
             return render(request,'login.html', {'error':"Password not correct!"})
     except User.DoesNotExist:

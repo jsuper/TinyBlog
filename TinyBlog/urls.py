@@ -6,10 +6,11 @@ admin.autodiscover()
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
+from TinyBlog import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', TemplateView.as_view(template_name='login.html')),
+    url(r'^$', views.index),
     # url(r'^TinyBlog/', include('TinyBlog.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
